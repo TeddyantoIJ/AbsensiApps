@@ -10,6 +10,7 @@ import IconLogoPolman from './Logo_Polman.svg'
 import IconNotifikasi from './notification.svg'
 import IconPrinter from './printer.svg'
 import IconDetail from './detail.svg'
+import IconLogin from './login.svg'
 
 export {IconAbsensi, IconAbsensi_aktif, IconBeranda, IconBeranda_aktif, IconPengumuman, IconPengumuman_aktif,
-IconUbahsandi, IconUbahsandi_aktif,IconLogoPolman,IconNotifikasi,IconPrinter,IconDetail}
+IconUbahsandi, IconUbahsandi_aktif,IconLogoPolman,IconNotifikasi,IconPrinter,IconDetail, IconLogin}

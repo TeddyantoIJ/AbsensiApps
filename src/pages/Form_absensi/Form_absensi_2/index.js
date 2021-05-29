@@ -9,7 +9,7 @@ const Form_absensi_2 = () => {
     return (
         <View>
             <View style={styles.containerForm}>
-                <HeaderFormAbsesni text={"Langkah 2 / 5 : Mengisi Riwayat Kesehatan"}/>            
+                <HeaderFormAbsesni text={"Langkah 2 / 5 : Mengisi Riwayat Kesehatan"}/>
                 <FormPengisian_2_1/>
                 <FormPengisian_2_2/>
                 <FormPengisian_2_3/>

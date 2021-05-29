@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View} from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {Beranda, Form_absensi, Riwayat_pengumuman, Testing, Ubah_sandi} from '../pages';
+import {Beranda, Form_absensi, Riwayat_pengumuman, Testing, Ubah_sandi, Login} from '../pages';
 import { BottomTabNavigator, HeaderApps, HeaderInformation } from '../components';
 import { IconLogoPolman } from '../assets';
 import { WARNA_SEKUNDER, WARNA_UTAMA } from '../utils/constants';
@@ -20,6 +20,7 @@ const MainApp = () => {
             <Tab.Screen name="Pengumuman" component={Riwayat_pengumuman} />
             <Tab.Screen name="Ubah Sandi" component={Ubah_sandi} />
             {/* <Tab.Screen name="Testing" component={Testing} /> */}
+            {/* <Tab.Screen name="Login" component={Login} /> */}
         </Tab.Navigator>        
     )
 }
@@ -46,8 +47,10 @@ const Router = () => {
             component={MainApp} 
             // options={{                                
             //     headerShown:false
-            //     }}            
-            options={{ headerTitle: props => <Header {...props} />,headerStyle:{height:160} }}
+            //     }}
+            options={
+                { headerTitle: props => <Header {...props} />,headerStyle:{height:160}}
+            }
             />            
         </Stack.Navigator>
     )

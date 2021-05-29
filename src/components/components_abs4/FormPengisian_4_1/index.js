@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {StyleSheet, Text, TextInput, View } from 'react-native'
 import { HeaderFormPengisian } from '..';
+import InformationPenting from '../InformationPenting';
 import RowPertanyaan from '../RowPertanyaan';
 
 
@@ -9,7 +10,8 @@ const FormPengisian_4_1 = () => {
     const [selectedValue, setSelectedValue] = useState("");
     return (
         <View style={styles.container}>
-            <HeaderFormPengisian/>
+            <InformationPenting/>
+            <HeaderFormPengisian/>            
             {/* Apakah saat ini Anda sedang OJT/Magang/Bekerja? */}
             <RowPertanyaan no={1} pertanyaan={"Apakah pernah keluar rumah/tempat umum (pasar, fasyankes, kerumunan orang, dan lain-lain)?"}/>
             <RowPertanyaan no={2} pertanyaan={"Apakah pernah menggunakan transportasi umum?"}/>

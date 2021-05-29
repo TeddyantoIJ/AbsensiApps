@@ -56,21 +56,29 @@ const styles = StyleSheet.create({
         width:20,
         textAlign:'center',
         color:WARNA_PUTIH,
-        alignSelf:'center'
+        alignSelf:'center',
+        fontFamily:"Poppins-Light",
+        fontSize:12
     },
     textPertanyaan:{
         justifyContent:'space-around',
         textAlign:'center',
-        color:WARNA_PUTIH
+        color:WARNA_PUTIH,
+        fontFamily:"Poppins-Light",
+        fontSize:12
     },
     textYa:{
         width:20,
         textAlign:'center',
-        color:WARNA_PUTIH
+        color:WARNA_PUTIH,
+        fontFamily:"Poppins-Light",
+        fontSize:12
     },
     textTidak:{
         width:20,
         textAlign:'center',
-        color:WARNA_PUTIH
+        color:WARNA_PUTIH,
+        fontFamily:"Poppins-Light",
+        fontSize:12
     },
 })

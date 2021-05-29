@@ -7,7 +7,7 @@ const Form_absensi_5 = () => {
     return (
         <View>
             <View style={styles.containerForm}>
-                <HeaderFormAbsesni text={"Langkah 5 / 5 : (?)"}/>            
+                <HeaderFormAbsesni text={"Langkah 5 / 5 : Unduh Formulir Deklarasi Kesehatan"}/>            
                 <FormPengisian_5_1/>                
             </View>
             <View style={styles.button}>

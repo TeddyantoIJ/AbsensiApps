@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { WARNA_HITAM } from '../../utils/constants'
 
-const InformasiDataDiri = () => {
+const InformasiDataDiri = ({nim, nama, prodi, tingkat, status, beasiswa, nomor}) => {
     return (
         <View style={styles.container}>
             <View style={styles.textContainer}>

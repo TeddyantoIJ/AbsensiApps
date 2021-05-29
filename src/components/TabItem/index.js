@@ -21,6 +21,9 @@ const TabItem = ({label, isFocused, onPress, onLongPress}) => {
         }
         if(label === "Testing"){
             return isFocused ? <IconUbahsandi_aktif/> : <IconUbahsandi/>
+        }
+        if(label === "Login"){
+            return isFocused ? <IconUbahsandi_aktif/> : <IconUbahsandi/>
         }  
     }
 

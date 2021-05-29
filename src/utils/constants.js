@@ -10,3 +10,5 @@ export const WARNA_HIJAU_MUDA = "#2CE028";
 export const WARNA_HITAM = "#000000";
 export const WARNA_MERAH = "#860000";
 export const WARNA_UNGU_MUDA = "#BA49FF";
+export const WARNA_KUNING = "#FFDCA8";
+export const WARNA_KUNING_TUA = "#BF8B3C";

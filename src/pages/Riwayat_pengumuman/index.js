@@ -2,14 +2,18 @@ import React from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import { HeaderApps,HeaderInformation, TablePengisian, TablePengumuman } from '../../components'
 import { WARNA_PUTIH } from '../../utils/constants'
+import {Riwayat_pengumuman_list, Riwayat_pengumuman_detail } from './Riwayat_pengumuman_routing'
+
 
 const Riwayat_pengumuman = () => {
     return (
         <View style={ styles.page }>            
             <ScrollView style={styles.containerScroll}>
-                <View styl={styles.container}>
-                    <TablePengumuman/>                    
-                </View>
+                {/* <Riwayat_pengumuman_list/> */}
+                <Riwayat_pengumuman_detail
+                    subyek="Himbauan Setelah Vaksin"
+                    isi="https://satgas-covid19.polman.astra.ac.id/Files/IMGTINYMCE/PENGUMUMAN_LLNb2zjkpIoFw31zZLNdWziHcIBJ7wBhYMTXmjV1FEBNzgvJZNbQSzGQMo1=01h=.jpg"
+                />
             </ScrollView>
         </View>
     )
