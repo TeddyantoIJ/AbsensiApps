@@ -1,10 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, TextInput, View } from 'react-native'
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { IconLogoPolman } from '../../assets/icons'
 import {ButtonLogin} from '../../components'
 import { WARNA_PUTIH, WARNA_SEKUNDER } from '../../utils/constants'
 
-const Login = () => {
+const Login = ({navigation}) => {
+    
     return (
         <View style={ styles.page }>            
             <View style={styles.container}>
@@ -21,8 +22,8 @@ const Login = () => {
                         placeholder="Kata Sandi"
                         style={styles.textInput}                    
                         />
-                    <View style={styles.button}>
-                        <ButtonLogin/>
+                    <View style={styles.button}>                    
+                        <ButtonLogin navigation={navigation} />
                     </View>
                 </View>                
             </View>

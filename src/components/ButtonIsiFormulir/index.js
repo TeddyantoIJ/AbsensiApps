@@ -2,10 +2,12 @@ import React from 'react'
 import { Button, StyleSheet, Text, View, Alert, TouchableOpacity  } from 'react-native'
 import { WARNA_HIJAU_MUDA, WARNA_PUTIH } from '../../utils/constants'
 
-const ButtonIsiFormulir = () => {
+const ButtonIsiFormulir = (props) => {
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.button} onPress={() => Alert.alert('isi formulir')}>
+            <TouchableOpacity 
+                style={styles.button} 
+                onPress={() => props.navigation.navigate("Form Absensi")}>
                 <Text style={styles.text}>ISI FORMULIR</Text>                
             </TouchableOpacity>
         </View>

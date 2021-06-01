@@ -9,7 +9,7 @@ const HeaderApps = () => {
             <IconLogoPolman/>
             <TouchableOpacity 
                 style={styles.touchable}
-                onPress={() => Alert.alert('logout')}    
+                onPress={() => Alert.alert('lgout')}    
             >
                 <Text style={styles.text}>
                     Logout

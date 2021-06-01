@@ -3,11 +3,13 @@ import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { IconLogin } from '../../assets/icons'
 import { WARNA_PUTIH, WARNA_UTAMA } from '../../utils/constants'
 
-const ButtonLogin = () => {
+const ButtonLogin = (props) => {
+    
     return (
         <View style={styles.button}>
             <TouchableOpacity
-                onPress={() => Alert.alert('aa')}
+                onPress={
+                    () => props.navigation.replace("MainApp")}
                 style={styles.touch}
             >
                 <Text style={styles.text}>

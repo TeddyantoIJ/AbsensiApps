@@ -13,7 +13,8 @@ const Tab = createBottomTabNavigator();
 
 
 const MainApp = () => {    
-    return (                
+    return (
+        
         <Tab.Navigator tabBar={props => <BottomTabNavigator {...props} />}>
             <Tab.Screen name="Beranda" component={Beranda} />
             <Tab.Screen name="Form Absensi" component={Form_absensi} />
@@ -34,7 +35,7 @@ function Header() {
                     role="MAHASISWA"
                     lastLogin="Login terakhir: 7 Mei 2021, 14:06 WIB"
                     notification="Anda sudah mengisi formulir absensi dan pendataan kesehatan mahasiswa. Terima kasih. "
-                    />                  
+                    />            
         </View>   
     );
   }
@@ -42,16 +43,23 @@ function Header() {
 const Router = () => {
     return (
         <Stack.Navigator>
+            <Stack.Screen
+                name="Login" 
+                component={Login}
+                options={{
+                    headerShown:false
+                }}
+            />
             <Stack.Screen 
-            name="MainApp" 
-            component={MainApp} 
-            // options={{                                
-            //     headerShown:false
-            //     }}
-            options={
-                { headerTitle: props => <Header {...props} />,headerStyle:{height:160}}
-            }
-            />            
+                name="MainApp" 
+                component={MainApp}
+                // options={{                                
+                //     headerShown:false
+                //     }}
+                options={
+                    { headerTitle: props => <Header {... props}/>,headerStyle:{height:160}}
+                }
+            />
         </Stack.Navigator>
     )
 }

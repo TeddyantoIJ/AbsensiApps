@@ -1,11 +1,11 @@
 import React from 'react'
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { ButtonIsiFormulir, HeaderApps, HeaderInformation, InformasiPengisian, NotifPengisian } from '../../components'
 
 
-import { WARNA_BG_FORM, WARNA_PUTIH, WARNA_SEKUNDER } from '../../utils/constants'
+import { WARNA_BG_FORM, WARNA_MERAH, WARNA_PUTIH, WARNA_SEKUNDER } from '../../utils/constants'
 
-const Beranda = ({hasAbsen=false}) => {
+const Beranda = ({hasAbsen=false, navigation}) => {
     return (
         <View style={ styles.page }>            
             <ScrollView  style={styles.containerScroll}>
@@ -20,11 +20,16 @@ const Beranda = ({hasAbsen=false}) => {
                     <InformasiPengisian/> 
                     {/* NOTIFIKASI PENGISIAN AKAN AKTIF JIKA SUDAH MENGISI FORMULIR*/}                    
                     {/* BUTTON ISI FORMULIR AKAN AKTTIF JIKA BELUM MENGISI FORMULIR */}
-                    {hasAbsen == true ? <NotifPengisian/>  : <ButtonIsiFormulir/>}
+                    {hasAbsen == true ? <NotifPengisian/>  : <ButtonIsiFormulir navigation = {navigation}/>}
+                    <TouchableOpacity 
+                        style={{alignItems:'center', backgroundColor:WARNA_MERAH}} 
+                        onPress={() => navigation.replace("Login")}>
+                        <Text style={{color:WARNA_PUTIH}}>Logout</Text>                
+                    </TouchableOpacity>
                     <Text style={styles.textKesulitan}>
                         Jika terdapat kesulitan tentang cara penggunaan aplikasi ini, silahkan menghubungi MIS / Bang Candra.
                     </Text>
-                </View>
+                </View>                 
             </ScrollView>
         </View>
     )
