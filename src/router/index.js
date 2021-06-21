@@ -14,7 +14,6 @@ const Tab = createBottomTabNavigator();
 
 const MainApp = () => {    
     return (
-        
         <Tab.Navigator tabBar={props => <BottomTabNavigator {...props} />}>
             <Tab.Screen name="Beranda" component={Beranda} />
             <Tab.Screen name="Form Absensi" component={Form_absensi} />

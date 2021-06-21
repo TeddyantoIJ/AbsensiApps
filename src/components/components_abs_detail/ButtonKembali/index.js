@@ -2,11 +2,13 @@ import React from 'react'
 import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { WARNA_PUTIH, WARNA_UNGU_MUDA } from '../../../utils/constants'
 
-const ButtonKembali = () => {
+const ButtonKembali = ({navigation}) => {
     return (
         <View style={styles.container}>
             <TouchableOpacity
-                onPress={() => Alert.alert('Kembali')}
+                onPress={() => Alert.alert('Kembali')
+                //onPress={() => navigation.goBack()
+            }
             >
                 <Text style={styles.text}>KEMBALI</Text>
             </TouchableOpacity>            

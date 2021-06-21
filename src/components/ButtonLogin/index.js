@@ -4,7 +4,6 @@ import { IconLogin } from '../../assets/icons'
 import { WARNA_PUTIH, WARNA_UTAMA } from '../../utils/constants'
 
 const ButtonLogin = (props) => {
-    
     return (
         <View style={styles.button}>
             <TouchableOpacity
