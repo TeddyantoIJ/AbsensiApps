@@ -1,14 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import { TablePengumuman } from '../../../components'
 import { WARNA_PUTIH } from '../../../utils/constants'
 
-const Riwayat_pengumuman_list = () => {
+const Riwayat_pengumuman_list = ({navigation}) => {
     return (
         <View style={ styles.page }>            
-                <View styl={styles.container}>
-                    <TablePengumuman/>                    
-                </View>
+            <ScrollView style={styles.containerScroll}>
+                <TablePengumuman navigation={navigation}/>
+            </ScrollView>
         </View>
     )
 }

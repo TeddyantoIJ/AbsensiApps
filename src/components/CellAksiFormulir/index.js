@@ -6,8 +6,8 @@ import { WARNA_SEKUNDER } from '../../utils/constants'
 
 const CellAksiFormulir = (props) => {
     const detailHandle = () => {
-        props.navigation.navigate('Form_absensi_detail')
         AsyncStorage.setItem('fma_id',props.fma_id+"")
+        props.navigation.navigate('Form_absensi_detail')
     }
 
     return (

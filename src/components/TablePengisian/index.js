@@ -35,23 +35,38 @@ export default class TablePengisian extends Component {
       let myRow = this.state.tableData.map((myValue,myIndex)=>{
         return(
           <DataTable.Row key={myIndex} style={styles.row}>
-              <DataTable.Cell>
+              <DataTable.Cell  style={{flex: 0.3}}>
                 <Text style={styles.textData}>{myIndex+1}</Text>
               </DataTable.Cell>
-              <DataTable.Cell>
+              <DataTable.Cell  style={{flex: 2}}>
                 <Text style={styles.textData}>{myValue.fma_tanggal}</Text>
               </DataTable.Cell>
-              <DataTable.Cell>
+              <DataTable.Cell  style={{flex: 1}}>
                 <Text style={styles.textData}>{myValue.fma_status}</Text>
               </DataTable.Cell>
-              <CellAksiFormulir navigation = {props.navigation} fma_id = {myValue.fma_id}/>
+              <DataTable.Cell  style={{flex: 0.5}}>
+                <CellAksiFormulir navigation = {props.navigation} fma_id = {myValue.fma_id}/>
+              </DataTable.Cell>
           </DataTable.Row>
         )
     });      
       return (
         <View style={styles.container}>
           <Table style={styles.table}>
-            <Row data={state.tableHead} /*widthArr={state.widthArr}*/ style={styles.head} textStyle={styles.textHead}/>
+            <DataTable.Row style={styles.head}>
+                <DataTable.Cell style={{flex: 0.3}}>
+                  <Text style={styles.textHead}>{this.state.tableHead[0]}</Text>
+                </DataTable.Cell>
+                <DataTable.Cell style={{flex: 2}}>
+                  <Text style={styles.textHead}>{this.state.tableHead[1]}</Text>
+                </DataTable.Cell>
+                <DataTable.Cell style={{flex: 1}}>
+                  <Text style={styles.textHead} numberOfLines={1}>{this.state.tableHead[2]}</Text>
+                </DataTable.Cell>
+                <DataTable.Cell style={{flex: 0.5}}>
+                  <Text style={styles.textHead}>{this.state.tableHead[3]}</Text>
+                </DataTable.Cell>
+            </DataTable.Row>
             {myRow}
           </Table>
         </View>
